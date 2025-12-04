@@ -1,6 +1,4 @@
 /* --- ESTILOS GENERALES --- */
-
-/* 1. Reseteo básico y tipografía */
 * {
     margin: 0;
     padding: 0;
@@ -11,18 +9,17 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f7f6; /* Fondo gris muy claro */
+    background-color: #f4f7f6;
     padding: 20px;
 }
 
-/* 2. Contenedor principal */
 .container {
     max-width: 1000px;
-    margin: 0 auto; /* Centra el contenido horizontalmente */
+    margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* 3. Encabezado (Header) */
+/* --- HEADER --- */
 header {
     text-align: center;
     margin-bottom: 60px;
@@ -37,18 +34,16 @@ header h1 {
 header p {
     font-size: 1.2rem;
     color: #666;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
-/* 4. Cuadrícula de Proyectos (Grid) */
+/* --- GRID DE PROYECTOS --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; /* Espacio entre tarjetas */
+    gap: 30px;
+    margin-bottom: 60px; /* Espacio antes del contacto */
 }
 
-/* 5. Tarjeta de Proyecto (Card) */
 .project-card {
     background-color: #fff;
     border-radius: 8px;
@@ -58,12 +53,11 @@ header p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura visualmente */
+    height: 100%;
 }
 
-/* Efecto Hover */
 .project-card:hover {
-    transform: translateY(-5px); /* Levanta la tarjeta */
+    transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
 
@@ -76,10 +70,10 @@ header p {
 .project-card p {
     margin-bottom: 25px;
     color: #555;
-    flex-grow: 1; /* Empuja el botón hacia abajo si el texto es corto */
+    flex-grow: 1;
 }
 
-/* 6. Botones y Enlaces */
+/* Botón principal de proyectos */
 .btn-link {
     display: inline-block;
     background-color: #3498db;
@@ -96,7 +90,64 @@ header p {
     background-color: #2980b9;
 }
 
-/* 7. Pie de página */
+/* --- SECCIÓN DE CONTACTO --- */
+.contact-section {
+    background-color: #fff;
+    padding: 50px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Para que se ajusten en móviles */
+}
+
+/* Botón de Contacto Sólido */
+.btn-contact {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px; /* Bordes redondeados modernos */
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-contact:hover {
+    background-color: #1a252f;
+    transform: translateY(-2px);
+}
+
+/* Botón de Contacto Bordeado (Outline) */
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #2c3e50;
+    color: #2c3e50;
+}
+
+.btn-outline:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* --- FOOTER --- */
 footer {
     text-align: center;
     margin-top: 60px;
@@ -106,12 +157,9 @@ footer {
     color: #888;
 }
 
-/* Opcional: Ajustes para móviles muy pequeños */
+/* Móviles */
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    .container {
-        padding: 20px 10px;
-    }
+    header h1 { font-size: 2rem; }
+    .container { padding: 20px 10px; }
+    .contact-links { flex-direction: column; }
 }
