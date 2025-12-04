@@ -1,0 +1,117 @@
+/* --- ESTILOS GENERALES --- */
+
+/* 1. Reseteo básico y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* Fondo gris muy claro */
+    padding: 20px;
+}
+
+/* 2. Contenedor principal */
+.container {
+    max-width: 1000px;
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 40px 20px;
+}
+
+/* 3. Encabezado (Header) */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 4. Cuadrícula de Proyectos (Grid) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Espacio entre tarjetas */
+}
+
+/* 5. Tarjeta de Proyecto (Card) */
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura visualmente */
+}
+
+/* Efecto Hover */
+.project-card:hover {
+    transform: translateY(-5px); /* Levanta la tarjeta */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.project-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.project-card p {
+    margin-bottom: 25px;
+    color: #555;
+    flex-grow: 1; /* Empuja el botón hacia abajo si el texto es corto */
+}
+
+/* 6. Botones y Enlaces */
+.btn-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.btn-link:hover {
+    background-color: #2980b9;
+}
+
+/* 7. Pie de página */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Opcional: Ajustes para móviles muy pequeños */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .container {
+        padding: 20px 10px;
+    }
+}
